@@ -1,0 +1,3 @@
+slave    tty1         2023-04-11 10:34
+slave    pts/0        2023-04-11 10:37 (pc1-302.mshome.net)
+slave    pts/1        2023-04-11 10:44 (sedashi.mshome.net)

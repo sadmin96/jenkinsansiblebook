@@ -1,0 +1,10 @@
+servers:
+  vars:
+    ansible_python_interpreter: /usr/bin/python
+  hosts:
+    server01:
+      ansible_ssh_host: slave@slave1
+      ansible_ssh_port: 22
+    server02:
+      ansible_ssh_host: slave@slave2
+      ansible_ssh_port: 22

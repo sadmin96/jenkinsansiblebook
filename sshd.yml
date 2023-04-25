@@ -1,0 +1,30 @@
+---
+- hosts: all 
+  become: true
+  tasks:
+  - name: connect
+    shell: who > conect.txt
+    register:
+     netstat_result
+    changed_when: false
+- hosts: server01
+  become: yes
+  tasks: 
+  - name: copy
+    fetch:
+      src: "/home/slave/conect.txt"
+      dest: /home/sadmin/ansible/
+      remote_src: yes
+      flat: yes
+      validate_checksum: false
+- hosts: server02
+  become: yes
+  tasks:
+  - name: copy
+    fetch:
+      src: "/home/slave/conect.txt"
+      dest: /home/sadmin/ansible/conect1.txt
+      remote_src: yes
+      flat: yes
+      validate_checksum: false
+
