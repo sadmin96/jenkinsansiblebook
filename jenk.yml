@@ -1,7 +1,6 @@
 ---
 - name: "Test playbook run"
-  hosts: localhost
+  hosts: all
   tasks:
-  - name: "Debug"
-    ansible.builtin.debug:
-      msg: "Test debug"
+    - name: "Debug"
+      shell: "touch test.bin"
