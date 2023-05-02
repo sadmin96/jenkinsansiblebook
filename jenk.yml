@@ -3,5 +3,4 @@
   hosts: all
   tasks:
     - name: "Debug"
-      ansible.builtin.debug:
-        msg: "Test debug"
+      shell: "touch test.bin"
