@@ -2,7 +2,7 @@
 - hosts: all
   become: true
   vars:
-    username: testuser6
+    username: testuser7
   vars_files:
      - passwd.yml
   tasks:
